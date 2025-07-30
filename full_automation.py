@@ -17,7 +17,7 @@ from utils.gpu_utils import get_gpu_type
 HF_USERNAME = os.environ["HF_USERNAME"]
 
 if __name__ == "__main__":
-    task_id = os.environ["TASK_ID"]
+    task_id = int(os.environ["TASK_ID"])
     # load trainin args
     # define the path of the current file
     current_folder = os.path.dirname(os.path.realpath(__file__))
