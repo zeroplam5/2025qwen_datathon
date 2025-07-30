@@ -25,6 +25,7 @@ if __name__ == "__main__":
         all_training_args = yaml.safe_load(f)
 
     task = get_task(task_id)
+    print(json.dumps(task, indent=4))
     # log the task info
     logger.info(json.dumps(task, indent=4))
     # download data from a presigned url
