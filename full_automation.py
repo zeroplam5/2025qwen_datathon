@@ -6,6 +6,9 @@ import yaml
 from loguru import logger
 from huggingface_hub import HfApi
 
+from dotenv import load_dotenv
+load_dotenv()
+
 from demo import LoraTrainingArguments, train_lora
 from utils.constants import model2base_model, model2size
 from utils.flock_api import get_task, submit_task
