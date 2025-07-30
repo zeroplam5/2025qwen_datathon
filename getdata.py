@@ -9,4 +9,6 @@ def load_task1_data(path="task1_data.jsonl"):
     with open(path, "wb") as f:
         f.write(response.content)
 
-    return 
+    return
+
+load_task1_data()
