@@ -4,18 +4,12 @@ import os
 import requests
 
 FLOCK_API_KEY = os.environ["FLOCK_API_KEY"]
-FED_LEDGER_BASE_URL = "https://fed-ledger-staging.flock.io/api/v1"
+FED_LEDGER_BASE_URL = "https://fed-ledger-prod.flock.io/api/v1"
 
 
 def get_task(task_id: int):
-
-    headers = {
-        "Authorization": f"Bearer {FLOCK_API_KEY}"  
-    }
-
     response = requests.request(
-        "GET", f"{FED_LEDGER_BASE_URL}/tasks/get?task_id={task_id}",
-        headers=headers
+        "GET", f"{FED_LEDGER_BASE_URL}/tasks/get?task_id={task_id}"
     )
     return response.json()
 
