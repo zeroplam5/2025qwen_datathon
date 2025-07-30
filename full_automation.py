@@ -10,7 +10,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from demo import LoraTrainingArguments, train_lora
-from data.constants import model2base_model, model2size
+from utils.constants import model2base_model, model2size
 from utils.flock_api import get_task, submit_task
 from utils.gpu_utils import get_gpu_type
 
