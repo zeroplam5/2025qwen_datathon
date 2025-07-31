@@ -45,8 +45,8 @@ def train_lora(
     training_args = SFTConfig(
         per_device_train_batch_size=training_args.per_device_train_batch_size,
         gradient_accumulation_steps=training_args.gradient_accumulation_steps,
-        warmup_steps=100,
-        learning_rate=2e-4,
+        warmup_steps=20,
+        learning_rate=1e-4,
         bf16=True,
         logging_steps=20,
         output_dir="outputs",
